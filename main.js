@@ -12,7 +12,8 @@ var x = 'Новый вкус';
 function flavorsNew(array) {
   var messege;
   for(i=0; i < array.length; i++) {
-    if(array.push(x)) {
+    if(i == array.length) {
+      array.push(x);
       messege = x;
     }
     else {
