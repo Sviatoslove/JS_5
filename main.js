@@ -19,10 +19,9 @@ function palindromeSearch(array) {
     function reverseString() {
       return array[i].split("").reverse().join("")
     };
-    console.log(reverseString());
     if(reverseString() === array[i]) {
-      arrPalindrome = array.slice((i,(i + 1)) + ', ');
-    } else {continue;}
+      arrPalindrome += array.slice(i,i + 1) + ', ';
+    } else {};
   }
   return arrPalindrome;
 }
