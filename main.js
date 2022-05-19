@@ -20,14 +20,14 @@ function palindromeSearch(array) {
       return array[i].split("").reverse().join("")
     };
     if(reverseString() === array[i]) {
-      arrPalindrome += array.slice(i,i + 1) + ', ';
+      console.log('Слово ' + array[i] + ' является палиндромом и отправляется в массив "arrPalindrome"')
+      arrPalindrome.push(array[i]);
     } else {};
   }
   return arrPalindrome;
 }
 var result = palindromeSearch(words);
 console.log(result);
-
 
 /* 
     TASK 4
