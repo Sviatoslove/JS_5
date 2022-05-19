@@ -12,23 +12,22 @@ var words = [
   'радар','вор','букет','доход','казак','варяг','потом'
 ];
 
+var arrPalindrome = [];
+
 function palindromeSearch(array) {
-  for(i=0; i < array.length; i++){
+  for(var i=0; i < array.length; i++){
     function reverseString() {
-      return str.split("").reverse().join("");
-    }
-    if(i = reverseString(i)) {
-      arrPalindrome += array.slice(i,(i + 1)) + ',';
-    } else {
-      arrPalindrome = [''];
+      return array[i].split("").reverse().join("")
     };
+    console.log(reverseString());
+    if(reverseString() === array[i]) {
+      arrPalindrome = array.slice((i,(i + 1)) + ', ');
+    } else {continue;}
   }
   return arrPalindrome;
 }
 var result = palindromeSearch(words);
 console.log(result);
-
-
 
 
 /* 
